@@ -1,0 +1,1 @@
+#String Gen Using Basic Math
