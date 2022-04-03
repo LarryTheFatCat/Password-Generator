@@ -9,8 +9,7 @@ import java.util.Random;
  */
 class StringGen {
 
-    static String getAlphaNumericString(int n)
-    {
+    static String getAlphaNumericString(int n) {
 
         // length is bounded by 256 Character
         byte[] array = new byte[256];
@@ -42,8 +41,7 @@ class StringGen {
         return r.toString();
     }
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         // size of random alphanumeric string
         int n = 20;
 
