@@ -43,7 +43,7 @@ class StringGen {
 
     public static void main(String[] args) {
         // size of random alphanumeric string
-        int n = 20;
+        int n = 156;
 
         // Get and display the alphanumeric string
         System.out.println(getAlphaNumericString(n));
