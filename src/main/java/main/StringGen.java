@@ -4,8 +4,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 /*
-    Not sure why I made this lol, I might make this a separate jar then link this to sql
-    Using this as an activationcode input would be astronomical, but that won't  be here for a long time
+* Uses basic math calcs to determine random string output. Good Password Gen :)
  */
 class StringGen {
 
