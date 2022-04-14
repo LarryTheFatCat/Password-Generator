@@ -3,12 +3,19 @@ package main;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
-/*
-* Uses basic math calcs to determine random string output. Good Password Gen :)
+/**
+ * Basic idea of what a password generator looks like.
  */
-class StringGen {
 
-    static String getAlphaNumericString(int n) {
+public class PasswordGenerator {
+
+    /**
+     * Gets alphanumeric string.
+     *
+     * @param n the n
+     * @return the alphanumeric string
+     */
+    public static String getAlphaNumericString(int n) {
 
         // length is bounded by 256 Character
         byte[] array = new byte[256];
@@ -40,6 +47,11 @@ class StringGen {
         return r.toString();
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         // size of random alphanumeric string
         int n = 156;
