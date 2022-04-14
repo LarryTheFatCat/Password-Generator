@@ -1,14 +1,13 @@
 package main;
 
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 /**
  * Basic idea of what a password generator looks like.
  */
-
 public class PasswordGenerator {
-
     /**
      * Gets alphanumeric string.
      *
@@ -16,7 +15,6 @@ public class PasswordGenerator {
      * @return the alphanumeric string
      */
     public static String getAlphaNumericString(int n) {
-
         // length is bounded by 256 Character
         byte[] array = new byte[256];
         new Random().nextBytes(array);
@@ -42,7 +40,11 @@ public class PasswordGenerator {
                 n--;
             }
         }
-
+        try (PrintWriter out = new PrintWriter("passwordInformation.txt")) {
+            out.println(r);
+        } catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
         // return the resultant string
         return r.toString();
     }
