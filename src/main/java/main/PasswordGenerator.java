@@ -40,6 +40,11 @@ public class PasswordGenerator {
                 n--;
             }
         }
+        /*
+        Code below tries to print out StringBuilder which stores the values of numbers and chars.
+        If an exception occurs. It prints it out.
+        Try catch statements are always so fun to use :)
+         */
         try (PrintWriter out = new PrintWriter("passwordInformation.txt")) {
             out.println(r);
         } catch (Exception e) {
