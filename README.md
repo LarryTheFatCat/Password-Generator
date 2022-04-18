@@ -5,7 +5,3 @@ Most of the information is straight forward, but I provided comments throughout 
 # Note
 
 I'm using Java 1.8, but either way this will probably work for all Java versions.
-
-# Proof?
-
-![img.png](img.png)

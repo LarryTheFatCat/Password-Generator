@@ -40,9 +40,6 @@ public class PasswordGenerator {
                 n--;
             }
         }
-        /*
-        Uses try statement to create txt with info. If exception -> print out.
-         */
         try (PrintWriter out = new PrintWriter("passwordInformation.txt")) {
             out.println(r);
         } catch (Exception e) {
