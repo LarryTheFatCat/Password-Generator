@@ -1,11 +1,14 @@
 package main;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 /**
  * Basic idea of what a password generator looks like.
+ * Use in IDE for results :)
  */
 public class PasswordGenerator {
     /**
@@ -14,7 +17,8 @@ public class PasswordGenerator {
      * @param n the n
      * @return the alphanumeric string
      */
-    public static String getAlphaNumericString(int n) {
+    public static @NotNull
+    String getAlphaNumericString(int n) {
         // length is bounded by 256 Character
         byte[] array = new byte[256];
         new Random().nextBytes(array);
@@ -25,8 +29,9 @@ public class PasswordGenerator {
         // Create a StringBuffer to store the result
         StringBuilder r = new StringBuilder();
 
-        // Append first 20 alphanumeric characters
-        // from the generated random String into the result
+        /* Append first 20 alphanumeric characters
+           from the generated random String into the result
+         */
         for (int k = 0; k < randomString.length(); k++) {
 
             char ch = randomString.charAt(k);
