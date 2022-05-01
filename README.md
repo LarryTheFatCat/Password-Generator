@@ -1,7 +1,4 @@
-# Basic Math Calculations to generate a complex string of numbers and text.
+# Random String Generator
 
-Most of the information is straight forward, but I provided comments throughout the code.
-
-# Note
-
-I'm using Java 1.8, but either way this will probably work for all Java versions.
+- Use any version you like, use an IDE for results, if you want to see a txt file make a pr and ill merge it.
+- Developed with Java 8
