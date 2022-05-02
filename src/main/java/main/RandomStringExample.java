@@ -45,7 +45,7 @@ public class RandomStringExample {
                 n--;
             }
         }
-        try (PrintWriter out = new PrintWriter("OutPut" + ".json")) {
+        try (PrintWriter out = new PrintWriter("Output" + ".json")) {
             out.println(r);
         } catch (Exception e) {
             System.out.println("Something went wrong.");
@@ -53,7 +53,6 @@ public class RandomStringExample {
         // return the resultant string
         return r.toString();
     }
-
     /**
      * The entry point of application.
      *
