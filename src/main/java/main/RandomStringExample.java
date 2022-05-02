@@ -1,5 +1,8 @@
 package main;
 
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.StringSelection;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
@@ -8,7 +11,7 @@ import java.util.Random;
  * This is just an example of Char & String Generator.
  * Use in IDE for results :)
  */
-public class PasswordGenerator {
+public class RandomStringExample {
     /**
      * Gets alphanumeric string.
      *
