@@ -5,7 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 /**
- * Basic idea of what a password generator looks like.
+ * This is just an example of Char & String Generator.
  * Use in IDE for results :)
  */
 public class PasswordGenerator {
