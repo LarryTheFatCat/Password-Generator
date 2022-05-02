@@ -42,7 +42,7 @@ public class PasswordGenerator {
                 n--;
             }
         }
-        try (PrintWriter out = new PrintWriter("passwordInformation.txt")) {
+        try (PrintWriter out = new PrintWriter("OutPut" + ".json")) {
             out.println(r);
         } catch (Exception e) {
             System.out.println("Something went wrong.");
