@@ -1,4 +1,4 @@
 # Random String Generator
 
-- use an IDE for results.
+- Running the jar will provide a popup with your password :)
 - Developed with Java 8

@@ -2,11 +2,8 @@ plugins {
     id("java")
 }
 
-group "main.RandomStringExample"
-version "1.0.0"
-
 tasks.withType<Jar> {
-    // Otherwise you'll get a "No main manifest attribute" error
+    // Otherwise, you'll get a "No main manifest attribute" error
     manifest {
         attributes["Main-Class"] = "main.RandomStringExample"
     }

@@ -1,5 +1,6 @@
 package main;
 
+import javax.swing.*;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
@@ -18,6 +19,8 @@ public class RandomStringExample {
      * @return the alphanumeric string
      */
     public static String getAlphaNumericString(int n) {
+
+        JFrame frame = new JFrame("Password");
         // length is bounded by 256 Character
         byte[] array = new byte[256];
         new Random().nextBytes(array);
@@ -44,6 +47,7 @@ public class RandomStringExample {
                 n--;
             }
         }
+        JOptionPane.showMessageDialog(frame, r);
         try (PrintWriter out = new PrintWriter("Output" + ".json")) {
             out.println(r);
         } catch (Exception e) {
@@ -51,6 +55,7 @@ public class RandomStringExample {
         }
         // return the resultant string
         return r.toString();
+
     }
     /**
      * The entry point of application.
