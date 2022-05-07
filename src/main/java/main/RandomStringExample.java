@@ -1,6 +1,11 @@
 package main;
 
 import javax.swing.*;
+import java.awt.*;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.ClipboardOwner;
+import java.awt.datatransfer.StringSelection;
+import java.awt.datatransfer.Transferable;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
@@ -9,8 +14,7 @@ import java.util.Random;
  * @author TwoOneTwo :)
  * Two#6969 <- if you have any questions
  * This is just an example of Char & String Generator.
- * No more IDE Ussage just use Java 8 :))
- */
+ * */
 public class RandomStringExample {
     /**
      * Gets alphanumeric string.
@@ -20,13 +24,13 @@ public class RandomStringExample {
      */
     public static String getAlphaNumericString(int n) {
 
+
         JFrame frame = new JFrame("Password");
         // length is bounded by 256 Character
         byte[] array = new byte[256];
         new Random().nextBytes(array);
 
-        String randomString
-                = new String(array, StandardCharsets.UTF_8);
+        String randomString = new String(array, StandardCharsets.UTF_8);
 
         // Create a StringBuffer to store the result
         StringBuilder r = new StringBuilder();
@@ -47,8 +51,9 @@ public class RandomStringExample {
                 n--;
             }
         }
-        JOptionPane.showMessageDialog(frame, r);
-        try (PrintWriter out = new PrintWriter("Output" + ".json")) {
+        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        JOptionPane.showMessageDialog(frame, r + "\n" + "Successfully copied to your clipboard!" + "\n" + "Generated New Text File Storing information!");
+        try (PrintWriter out = new PrintWriter("output-info.txt")) {
             out.println(r);
         } catch (Exception e) {
             System.out.println("Something went wrong.");
@@ -56,7 +61,9 @@ public class RandomStringExample {
         // return the resultant string
         return r.toString();
 
+
     }
+
     /**
      * The entry point of application.
      *
@@ -65,7 +72,6 @@ public class RandomStringExample {
     public static void main(String[] args) {
         // size of random alphanumeric string
         int n = 156;
-
         // Get and display the alphanumeric string
         System.out.println(getAlphaNumericString(n));
     }
