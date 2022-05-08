@@ -1,11 +1,6 @@
 package main;
 
 import javax.swing.*;
-import java.awt.*;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.ClipboardOwner;
-import java.awt.datatransfer.StringSelection;
-import java.awt.datatransfer.Transferable;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
@@ -52,7 +47,13 @@ public class RandomStringExample {
             }
         }
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        JOptionPane.showMessageDialog(frame, r + "\n" + "Successfully copied to your clipboard!" + "\n" + "Generated New Text File Storing information!");
+        // Might look chinese but, I need to use this due to null pointer exceptions are appearing for some reason :c
+        try {
+            JOptionPane.showMessageDialog(frame, r + "\n" + "Successfully copied to your clipboard!" + "\n" + "Generated New Text File Storing information!");
+        } catch (Exception e) {
+            System.out.println("Something went wrong.");
+        }
+
         try (PrintWriter out = new PrintWriter("output-info.txt")) {
             out.println(r);
         } catch (Exception e) {
