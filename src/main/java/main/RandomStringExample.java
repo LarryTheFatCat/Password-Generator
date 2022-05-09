@@ -10,6 +10,8 @@ import java.util.Random;
  * Two#6969 <- if you have any questions
  * This is just an example of Char & String Generator.
  * */
+
+// TODO: Figure out how to make it so if you close it shows a warning asking if you want to copy it to clipboard preClose.
 public class RandomStringExample {
     /**
      * Gets alphanumeric string.
@@ -18,7 +20,6 @@ public class RandomStringExample {
      * @return the alphanumeric string
      */
     public static String getAlphaNumericString(int n) {
-
 
         JFrame frame = new JFrame("Password");
         // length is bounded by 256 Character
@@ -61,6 +62,7 @@ public class RandomStringExample {
         }
         // return the resultant string
         return r.toString();
+
 
 
     }
