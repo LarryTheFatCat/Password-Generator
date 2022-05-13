@@ -9,19 +9,19 @@ import java.util.Random;
  * @author TwoOneTwo :)
  * Two#6969 <- if you have any questions
  * This is just an example of Char & String Generator.
- * */
+ */
 
-// TODO: Figure out how to make it so if you close it shows a warning asking if you want to copy it to clipboard preClose.
-public class RandomStringExample {
+// TODO: Figure out how to make it so if you close it shows a warning asking if you want to copy it to clipboard postClose.
+public class RandomStringExample extends JOptionPane {
     /**
      * Gets alphanumeric string.
      *
-     * @param n the n
      * @return the alphanumeric string
      */
     public static String getAlphaNumericString(int n) {
 
         JFrame frame = new JFrame("Password");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // length is bounded by 256 Character
         byte[] array = new byte[256];
         new Random().nextBytes(array);
@@ -47,31 +47,23 @@ public class RandomStringExample {
                 n--;
             }
         }
-        frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-        // Might look chinese but, I need to use this due to null pointer exceptions are appearing for some reason :c
-        try {
-            JOptionPane.showMessageDialog(frame, r + "\n" + "Successfully copied to your clipboard!" + "\n" + "Generated New Text File Storing information!");
-        } catch (Exception e) {
-            System.out.println("Something went wrong.");
-        }
-
+        // PrintWriter && JOptionPane both use Try catch... Why not put both in 1 :)), fixed all bugs as well
         try (PrintWriter out = new PrintWriter("output-info.txt")) {
             out.println(r);
+            JOptionPane.showConfirmDialog(frame, r + "\n" + "Generated New Text File Storing information!" + "\n" + "Do you want it copied to clipboard?");
         } catch (Exception e) {
-            System.out.println("Something went wrong.");
+            throw new RuntimeException("Interrupted during process...");
         }
+
+
         // return the resultant string
         return r.toString();
 
 
-
     }
 
-    /**
-     * The entry point of application.
-     *
-     * @param args the input arguments
-     */
+
+
     public static void main(String[] args) {
         // size of random alphanumeric string
         int n = 156;
