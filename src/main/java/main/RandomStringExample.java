@@ -44,11 +44,12 @@ public class RandomStringExample extends JOptionPane {
             }
         }
 
-        // @Credit Lazzzy <3
+        // @Credit Lazy <3
         sendToClipBoard(r);
 
         // PrintWriter && JOptionPane both use Try catch... Why not put both in 1 :)), fixed all bugs as well
         try (PrintWriter out = new PrintWriter("output-info.txt")) {
+
             out.println(r);
             JOptionPane.showMessageDialog(frame, r + "\n" + "Generated New Text File Storing information & copied to clipboard!");
         } catch (Exception e) {
