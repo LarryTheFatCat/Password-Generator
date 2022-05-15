@@ -27,10 +27,6 @@ public class RandomStringExample extends JOptionPane {
         // Create a StringBuffer to store the result
         StringBuilder r = new StringBuilder();
 
-        // @Credit Lazzzy <3
-        sendToClipBoard(r);
-
-
         /* Append first 20 alphanumeric characters
         from the generated random String into the result
          */
@@ -50,6 +46,7 @@ public class RandomStringExample extends JOptionPane {
 
         // @Credit Lazzzy <3
         sendToClipBoard(r);
+
         // PrintWriter && JOptionPane both use Try catch... Why not put both in 1 :)), fixed all bugs as well
         try (PrintWriter out = new PrintWriter("output-info.txt")) {
             out.println(r);
