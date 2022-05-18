@@ -13,7 +13,7 @@
 - Creates a text file containing the output
 
 # Todo
-- Nothing is really left, I did what I wanted to do.
+- Include special chars for the output
 
 # Credit
 
