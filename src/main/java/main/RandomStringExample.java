@@ -8,7 +8,6 @@ import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
-@SuppressWarnings("PARAMETER")
 public class RandomStringExample extends JOptionPane {
     /**
      * Gets alphanumeric string.
@@ -49,11 +48,10 @@ public class RandomStringExample extends JOptionPane {
 
 
         try (PrintWriter out = new PrintWriter("output-info.txt")) {
-
             out.println(r);
             JOptionPane.showMessageDialog(frame, r + "\n" + "Generated New Text File Storing information & copied to clipboard!");
         } catch (Exception e) {
-            throw new RuntimeException("Interrupted during process...");
+            e.printStackTrace();
         }
         // return the resultant string
         return r.toString();
