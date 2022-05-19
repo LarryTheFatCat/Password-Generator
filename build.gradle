@@ -1,0 +1,6 @@
+plugins {
+    id 'java'
+}
+
+group 'main'
+version '1.0-SNAPSHOT'

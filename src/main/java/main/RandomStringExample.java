@@ -16,7 +16,7 @@ public class RandomStringExample extends JOptionPane {
      */
     public static String getAlphaNumericString(int n) {
 
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("meow");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         // length is bounded by 256 Character
         byte[] array = new byte[256];
@@ -44,17 +44,20 @@ public class RandomStringExample extends JOptionPane {
                 n--;
             }
         }
+        // check line 62 for code
         sendToClipBoard(r);
 
+        // We can use a dialog to show the output instead of using an ide, much simpler lol...
+        JOptionPane.showMessageDialog(frame, r + "\n" + "Generated New Text File Storing information & copied to clipboard!");
 
         try (PrintWriter out = new PrintWriter("output-info.txt")) {
             out.println(r);
-            JOptionPane.showMessageDialog(frame, r + "\n" + "Generated New Text File Storing information & copied to clipboard!");
         } catch (Exception e) {
             e.printStackTrace();
         }
         // return the resultant string
         return r.toString();
+
     }
 
     private static void sendToClipBoard(StringBuilder stringBuilder){
