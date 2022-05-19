@@ -13,9 +13,9 @@ public class RandomStringExample extends JOptionPane {
         // length is bounded by 256 Character
         byte[] array = new byte[256];
         new Random().nextBytes(array);
-        String randomString = new String(array, StandardCharsets.UTF_8);
 
         // Create a StringBuffer to store the result
+        String randomString = new String(array, StandardCharsets.UTF_8);
         StringBuilder r = new StringBuilder();
 
         // Append first 20 alphanumeric characters from the generated random String into the result
@@ -32,22 +32,25 @@ public class RandomStringExample extends JOptionPane {
                 n--;
             }
         }
-
         sendToClipBoard(r);
-        JFrame f = new JFrame();
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        JOptionPane.showMessageDialog(f, r + "\n" + "Generated New Text File Storing information & copied to clipboard!");
 
+        JFrame f = new JFrame();
+        JOptionPane.showMessageDialog(f, r + "\n" + "Copied to clipboard & created file...");
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        // Using PrintWriter we can print out the result that is stored inside it
         try (PrintWriter o = new PrintWriter("output-info.txt")) {
             o.println(r);
         } catch (Exception er) {
             er.printStackTrace();
         }
 
-        // return the resultant string
+        // return resultant string
         return r.toString();
 
     }
+
+    // Stores the output in your clipboard...
     private static void sendToClipBoard(StringBuilder stringBuilder){
         StringSelection stringSelection = new StringSelection(stringBuilder.toString());
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();

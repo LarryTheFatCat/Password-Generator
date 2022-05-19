@@ -7,17 +7,16 @@
 
 # Things in it.
 
-- 156 char limit (can be below 156 but nothing above)
+- 156 char limit (Can be changeable, just check line 62)
 - MessageDialog option for when it creates the output
-- Copies the output to clipboard 
-- Creates a text file containing the output
+- Stores the output to clipboard 
+- Creates a text file that stores the output
 
 # Todo
 - Include special chars for the output
 
 # Credit
 
-- LazzzyJava for helping with copying to clipboard :)
+- LazzzyJava for helping with storing the output into your clipboard :)
 - https://www.geeksforgeeks.org/java-swing-jdialog-examples/ for some info
-- https://stackoverflow.com/questions/11496700/how-to-use-printwriter-and-file-classes-in-java Discovered printwriter but forgot about it lol, this helped a lot...
-- Larry cuz he's my cat :)
+- https://stackoverflow.com/questions/11496700/how-to-use-printwriter-and-file-classes-in-java Discovered PrintWriter but forgot about it lol, this helped a lot
