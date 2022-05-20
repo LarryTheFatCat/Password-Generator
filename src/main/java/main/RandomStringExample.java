@@ -32,17 +32,19 @@ public class RandomStringExample extends JOptionPane {
                 n--;
             }
         }
+
         sendToClipBoard(r);
 
         JFrame f = new JFrame();
-        JOptionPane.showMessageDialog(f, r + "\n" + "Copied to clipboard & created file...");
+        JOptionPane.showMessageDialog(f, r + "\n" + "Copied to clipboard & creating file...");
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Using PrintWriter we can print out the result that is stored inside it
+
+        // If there is an interruption that occurs during the printing session, it will print stacktrace.
         try (PrintWriter o = new PrintWriter("output-info.txt")) {
             o.println(r);
-        } catch (Exception er) {
-            er.printStackTrace();
+        } catch (Exception interruption) {
+            interruption.printStackTrace();
         }
 
         // return resultant string
