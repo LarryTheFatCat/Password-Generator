@@ -13,7 +13,7 @@
 - Creates a text file that stores the output
 
 # Todo
-- Include special chars for the output
+- Figure out when closing the JOptionpane, it opens another one up asking if you want it copied to clipboard, then using that action event we can copy it to clipboard lol
 
 # Credit
 

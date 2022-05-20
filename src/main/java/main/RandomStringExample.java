@@ -24,6 +24,7 @@ public class RandomStringExample extends JOptionPane {
             char ch = randomString.charAt(k);
 
             if (((ch >= 'a' && ch <= 'z')
+                    || (ch >= '!' && ch <= '+')
                     || (ch >= 'A' && ch <= 'Z')
                     || (ch >= '0' && ch <= '9'))
                     && (n > 0)) {
