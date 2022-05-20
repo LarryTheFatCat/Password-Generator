@@ -33,7 +33,6 @@ public class RandomStringExample extends JOptionPane {
                 n--;
             }
         }
-
         sendToClipBoard(r);
 
         JFrame f = new JFrame();
@@ -47,10 +46,8 @@ public class RandomStringExample extends JOptionPane {
         } catch (Exception interruption) {
             interruption.printStackTrace();
         }
-
         // return resultant string
         return r.toString();
-
     }
 
     // Stores the output in your clipboard...
@@ -61,7 +58,7 @@ public class RandomStringExample extends JOptionPane {
     }
     public static void main(String[] args) {
         // size of random alphanumeric string
-        int n = 156;
+        int n = 50;
         // Get and display the alphanumeric string
         System.out.println(getAlphaNumericString(n));
     }
