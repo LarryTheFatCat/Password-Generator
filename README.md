@@ -11,9 +11,8 @@
 - MessageDialog option for when it creates the output
 - Stores the output to clipboard 
 - Creates a text file that stores the output
-
 # Todo
-- Figure out when closing the JOptionpane, it opens another one up asking if you want it copied to clipboard, then using that action event we can copy it to clipboard lol
+- Figure out when closing the JOptionPane, it opens another one up asking if you want it copied to clipboard, then using that action event we can copy it to clipboard lol
 
 # Credit
 

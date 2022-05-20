@@ -24,9 +24,9 @@ public class RandomStringExample extends JOptionPane {
             char ch = randomString.charAt(k);
 
             if (((ch >= 'a' && ch <= 'z')
-                    || (ch >= '!' && ch <= '+')
                     || (ch >= 'A' && ch <= 'Z')
                     || (ch >= '0' && ch <= '9'))
+                    || (ch >= '!' && ch <= '+')
                     && (n > 0)) {
 
                 r.append(ch);
@@ -35,20 +35,23 @@ public class RandomStringExample extends JOptionPane {
         }
         sendToClipBoard(r);
 
+        // return the resultant string in a JOptionPane.
         JFrame f = new JFrame();
-        JOptionPane.showMessageDialog(f, r + "\n" + "Copied to clipboard & creating file...");
+        JOptionPane.showMessageDialog(f, r + "\n" + "Copied to clipboard & creating file...", "password-output", JOptionPane.INFORMATION_MESSAGE);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
 
-        // If there is an interruption that occurs during the printing session, it will print stacktrace.
-        try (PrintWriter o = new PrintWriter("output-info.txt")) {
+        // Create a file to write the output.
+        try (PrintWriter o = new PrintWriter("output-info.txt", "UTF-8")) {
             o.println(r);
-        } catch (Exception interruption) {
-            interruption.printStackTrace();
+        } catch (Exception er) {
+            throw new RuntimeException(er);
         }
-        // return resultant string
+
+        // Returns the result
         return r.toString();
-    }
+
+    } // end of method
 
     // Stores the output in your clipboard...
     private static void sendToClipBoard(StringBuilder stringBuilder){
@@ -59,6 +62,7 @@ public class RandomStringExample extends JOptionPane {
     public static void main(String[] args) {
         // size of random alphanumeric string
         int n = 50;
+
         // Get and display the alphanumeric string
         System.out.println(getAlphaNumericString(n));
     }

@@ -1,3 +1,5 @@
+# Person who sent me this has loads of woman :P
+
 # User-specific stuff
 .idea/
 
@@ -116,3 +118,6 @@ run/
 
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
+
+# Avoid pushing output-info.txt to GitHub.
+!output-info.txt
