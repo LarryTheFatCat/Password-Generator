@@ -31,21 +31,27 @@ public class RandomStringExample {
                 n--;
             }
         }
-        sendToClipBoard(r);
         // return the resultant string in a JOptionPane.
         JOptionPane.showMessageDialog(null, r + "\n" + "Copied to clipboard & creating file...", "password-output", JOptionPane.INFORMATION_MESSAGE);
-        //close the window opening another JOptionPane
-        JOptionPane.showMessageDialog(null, "File created successfully", "password-output", JOptionPane.INFORMATION_MESSAGE);
 
-        // Create a file to write the output.
-        try (PrintWriter o = new PrintWriter("output-info.txt", String.valueOf(StandardCharsets.UTF_8))) {
-            o.println(r);
-        } catch (Exception er) {
-            throw new RuntimeException(er);
+        // Variable response set to confirm dialog.
+        int response = JOptionPane.showConfirmDialog(null, "File created & Results copied to clipboard.", "password-output", JOptionPane.YES_NO_OPTION);
+
+        // when response is yes, create file and write to it as well as copy to clipboard.
+        if (response == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, "SAVED");
+            try (PrintWriter o = new PrintWriter("output-info.txt", String.valueOf(StandardCharsets.UTF_8))) {
+                o.println(r);
+            } catch (Exception er) {
+                throw new RuntimeException(er);
+            }
+            sendToClipBoard(r);
+        } else {
+            JOptionPane.showMessageDialog(null, "DID NOT SAVE ");
+            System.exit(0);
         }
-
-    } // end of method
-
+        // end of method
+    }
 
     // Stores the output in your clipboard...
     private static void sendToClipBoard(StringBuilder stringBuilder) {
@@ -56,10 +62,11 @@ public class RandomStringExample {
 
 
     public static void main(String[] args) {
+
         // size of random alphanumeric string
         int n = 50;
 
-        // Nanoseconds thread sleep...
+        // Load everything with delay of 142 nanoseconds :P
          try {
             Thread.sleep(0, 142);
         } catch (InterruptedException e) {
