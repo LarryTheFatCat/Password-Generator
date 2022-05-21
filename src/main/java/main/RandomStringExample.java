@@ -9,7 +9,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 public class RandomStringExample extends JOptionPane {
-    public static String getAlphaNumericString(int n) {
+    public static void getAlphaNumericString(int n) {
         // length is bounded by 256 Character
         byte[] array = new byte[256];
         new Random().nextBytes(array);
@@ -49,21 +49,28 @@ public class RandomStringExample extends JOptionPane {
         }
 
         // Returns the result
-        return r.toString();
 
     } // end of method
 
     // Stores the output in your clipboard...
-    private static void sendToClipBoard(StringBuilder stringBuilder){
+    private static void sendToClipBoard(StringBuilder stringBuilder) {
         StringSelection stringSelection = new StringSelection(stringBuilder.toString());
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(stringSelection, null);
     }
+
     public static void main(String[] args) {
         // size of random alphanumeric string
         int n = 50;
 
-        // Get and display the alphanumeric string
-        System.out.println(getAlphaNumericString(n));
+        // Nanoseconds thread sleep...
+         try {
+            Thread.sleep(0, 142);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // call the method
+        getAlphaNumericString(n);
     }
 }

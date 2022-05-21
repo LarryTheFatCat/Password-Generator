@@ -6,13 +6,14 @@
 
 
 # Things in it.
-
+- Copies to clipboard automatically (if you have the permission).
 - 156 char limit (Can be changeable, just check line 62)
-- MessageDialog option for when it creates the output
-- Stores the output to clipboard 
-- Creates a text file that stores the output
+- MessageDialog option for when it creates the output.
+- Stores the output to clipboard.
+- Creates a text file that stores the output 
+- 
 # Todo
-- Figure out when closing the JOptionPane, it opens another one up asking if you want it copied to clipboard, then using that action event we can copy it to clipboard lol
+- Confirm exit dialog asking to copy output to clipboard invoking method to copy to clipboard.
 
 # Credit
 
