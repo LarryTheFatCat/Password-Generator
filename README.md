@@ -4,14 +4,13 @@
 - Developed with Java 8
 - I am in love with try-catch 
 
-
 # Things in it.
 - Copies to clipboard automatically (if you have the permission).
 - 156 char limit (Can be changeable, just check line 62)
 - MessageDialog option for when it creates the output.
 - Stores the output to clipboard.
 - Creates a text file that stores the output 
-- 
+
 # Todo
 - Confirm exit dialog asking to copy output to clipboard invoking method to copy to clipboard.
 
