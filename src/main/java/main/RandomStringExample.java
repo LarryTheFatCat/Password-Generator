@@ -39,15 +39,15 @@ public class RandomStringExample {
 
         // when response is yes, create file and write to it as well as copy to clipboard.
         if (response == JOptionPane.YES_OPTION) {
-            JOptionPane.showMessageDialog(null, "SAVED");
+            JOptionPane.showMessageDialog(null, "Saved to clipboard & desktop.");
             try (PrintWriter o = new PrintWriter("output-info.txt", String.valueOf(StandardCharsets.UTF_8))) {
                 o.println(r);
-            } catch (Exception er) {
-                throw new RuntimeException(er);
+            } catch (Exception e) {
+                throw new RuntimeException(e);
             }
             sendToClipBoard(r);
         } else {
-            JOptionPane.showMessageDialog(null, "DID NOT SAVE ");
+            JOptionPane.showMessageDialog(null, "Canceled save to clipboard & desktop.");
             System.exit(0);
         }
         // end of method
