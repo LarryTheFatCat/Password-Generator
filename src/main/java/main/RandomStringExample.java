@@ -32,22 +32,27 @@ public class RandomStringExample {
             }
         }
         // return the resultant string in a JOptionPane.
-        JOptionPane.showMessageDialog(null, r + "\n" + "Copied to clipboard & creating file...", "password-output", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, r + "\n" + "Click OK to see your options...", "output", JOptionPane.INFORMATION_MESSAGE);
 
         // Variable response set to confirm dialog.
-        int response = JOptionPane.showConfirmDialog(null, "File created & Results copied to clipboard.", "password-output", JOptionPane.YES_NO_OPTION);
+        int response = JOptionPane.showConfirmDialog(null, "Do you want to see your password on your desktop and your clipboard?.", "password-output", JOptionPane.YES_NO_OPTION);
 
         // when response is yes, create file and write to it as well as copy to clipboard.
         if (response == JOptionPane.YES_OPTION) {
-            JOptionPane.showMessageDialog(null, "Saved to clipboard & desktop.");
+
+            JOptionPane.showMessageDialog(null, "Saving to Clipboard & Desktop.");
+            JOptionPane.showMessageDialog(null, "Saved!");
             try (PrintWriter o = new PrintWriter("output-info.txt", String.valueOf(StandardCharsets.UTF_8))) {
                 o.println(r);
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
+
             sendToClipBoard(r);
         } else {
-            JOptionPane.showMessageDialog(null, "Canceled save to clipboard & desktop.");
+            JOptionPane.showMessageDialog(null, "Canceling save...");
+            JOptionPane.showMessageDialog(null, "Canceled!");
+
             System.exit(0);
         }
         // end of method

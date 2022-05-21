@@ -12,10 +12,15 @@
 - Creates a text file that stores the output 
 
 # Todo
-- Confirm exit dialog asking to copy output to clipboard invoking method to copy to clipboard.
+- Change colour of the JDialog to grey because having it white is so bright with no lights on.
+- Use flatLaF instead of the default look and feel.
+- Have a logo in the top left corner of your dialog using FlatLaF.
+- Change font using FlatLaF.
+- Change Font Size.
+- Maybe rewrite comments to be more clear.
 
 # Credit
 
-- LazzzyJava for helping with storing the output into your clipboard :)
+- LazzzyJava for helping
 - https://www.geeksforgeeks.org/java-swing-jdialog-examples/ for some info
 - https://stackoverflow.com/questions/11496700/how-to-use-printwriter-and-file-classes-in-java Discovered PrintWriter but forgot about it lol, this helped a lot
