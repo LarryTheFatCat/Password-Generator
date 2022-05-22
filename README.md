@@ -15,8 +15,6 @@
 - Asking if you want to see the file in your directory or not.
 
 # Todo
-- 
-- Ask if you want to see the amount of characters inside the file. provided yes, it will show the amount of characters. Provided no it will not show the amount of characters.
 - Ask if you want to see the location of the file. Provided yes, it will show the location of the file in a JOptionPane. Provided no it will not show the location of the file.
 - JOptionPane for when the file is already in your directory.
 - JOptionPane for when the file is not in your directory.
