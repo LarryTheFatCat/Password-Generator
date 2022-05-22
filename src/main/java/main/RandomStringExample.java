@@ -54,9 +54,17 @@ public class RandomStringExample {
             JOptionPane.showMessageDialog(null, "Cancelled!", "Output", JOptionPane.INFORMATION_MESSAGE);
         }
 
+        // Ask if you want to see the amount of chars inside the file
+        int r3 = JOptionPane.showConfirmDialog(null, "Would you like to see the amount of characters in the file before you create a file?", "Output", JOptionPane.YES_NO_OPTION);
+        if (r3 == JOptionPane.YES_OPTION) {
+            JOptionPane.showMessageDialog(null, "There are a total of " + r.length() + " characters in this string.", "Output", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            JOptionPane.showMessageDialog(null, "Canceling...", "Output", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Cancelled!", "Output", JOptionPane.INFORMATION_MESSAGE);
+        }
+
         int r1 = JOptionPane.showConfirmDialog(null, "Would you like it as a file?.", "Output", JOptionPane.YES_NO_OPTION);
         if (r1 == JOptionPane.YES_OPTION) {
-            // Check if file already exists in the directory.
             if(!new File("output-info.json").exists()) {
                 JOptionPane.showMessageDialog(null, "File not Found, Creating file...", "Output", JOptionPane.INFORMATION_MESSAGE);
                 try (PrintWriter o = new PrintWriter("output-info.json", String.valueOf(StandardCharsets.UTF_8))) {
@@ -75,6 +83,10 @@ public class RandomStringExample {
 
             System.exit(0);
         }
+
+
+
+
         // end of method getAlphaNumericString.
     }
 
