@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
+import java.io.File;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.Random;
@@ -55,14 +56,18 @@ public class RandomStringExample {
 
         int r1 = JOptionPane.showConfirmDialog(null, "Would you like it as a file?.", "Output", JOptionPane.YES_NO_OPTION);
         if (r1 == JOptionPane.YES_OPTION) {
-
-            JOptionPane.showMessageDialog(null, "Trying...", "Output", JOptionPane.INFORMATION_MESSAGE);
-            JOptionPane.showMessageDialog(null, "Saved!", "Output", JOptionPane.INFORMATION_MESSAGE);
-            try (PrintWriter o = new PrintWriter("output-info.json", String.valueOf(StandardCharsets.UTF_8))) {
-                o.println(r);
-                o.println("There are a total of " + r.length() + " characters in this string.");
-            } catch (Exception e) {
-                throw new RuntimeException(e);
+            // Check if file already exists in the directory.
+            if(!new File("output-info.json").exists()) {
+                JOptionPane.showMessageDialog(null, "File not Found, Creating file...", "Output", JOptionPane.INFORMATION_MESSAGE);
+                try (PrintWriter o = new PrintWriter("output-info.json", String.valueOf(StandardCharsets.UTF_8))) {
+                    o.println(r);
+                    o.println("There are a total of " + r.length() + " characters in this string.");
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+            } else {
+                JOptionPane.showMessageDialog(null, "File found!", "Output", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "File already exists, please delete the file and try again....", "Output", JOptionPane.INFORMATION_MESSAGE);
             }
         } else {
             JOptionPane.showMessageDialog(null, "Canceling save...", "Output", JOptionPane.INFORMATION_MESSAGE);
