@@ -77,6 +77,14 @@ public class RandomStringExample {
                 JOptionPane.showMessageDialog(null, "File found!", "Output", JOptionPane.INFORMATION_MESSAGE);
                 JOptionPane.showMessageDialog(null, "File already exists, please delete the file and try again....", "Output", JOptionPane.INFORMATION_MESSAGE);
             }
+            // Ask if you want to see the location of output-info.json file.
+            int r4 = JOptionPane.showConfirmDialog(null, "Would you like to see the location of the file?", "Output", JOptionPane.YES_NO_OPTION);
+            if (r4 == JOptionPane.YES_OPTION) {
+                JOptionPane.showMessageDialog(null, "The file is located at: " + new File("output-info.json").getAbsolutePath(), "Output", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(null, "Canceling...", "Output", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Cancelled!", "Output", JOptionPane.INFORMATION_MESSAGE);
+            }
         } else {
             JOptionPane.showMessageDialog(null, "Canceling save...", "Output", JOptionPane.INFORMATION_MESSAGE);
             JOptionPane.showMessageDialog(null, "Canceled!", "Output", JOptionPane.INFORMATION_MESSAGE);
