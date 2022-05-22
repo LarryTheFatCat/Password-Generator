@@ -34,8 +34,7 @@ public class RandomStringExample {
                     || (ch >= 'A' && ch <= 'Z')
                     || (ch >= '0' && ch <= '9'))
                     || (ch >= '!' && ch <= '+')
-                    && (n > 0))
-            {
+                    && (n > 0)) {
                 r.append(ch);
                 n--;
             }
