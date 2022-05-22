@@ -40,6 +40,8 @@ public class RandomStringExample {
                 n--;
             }
         }
+
+
         // Print the generated String in the Dialog Box.
         JOptionPane.showMessageDialog(null, r + "\n" + "Click Ok to see your options...", "output", JOptionPane.INFORMATION_MESSAGE);
 
@@ -75,7 +77,7 @@ public class RandomStringExample {
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "File found!", "Output", JOptionPane.INFORMATION_MESSAGE);
-                JOptionPane.showMessageDialog(null, "File already exists, please delete the file and try again....", "Output", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "File already exists, would you like a new file with a extra number?", "Output", JOptionPane.INFORMATION_MESSAGE);
             }
             // Ask if you want to see the location of output-info.json file.
             int r4 = JOptionPane.showConfirmDialog(null, "Would you like to see the location of the file?", "Output", JOptionPane.YES_NO_OPTION);

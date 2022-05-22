@@ -14,9 +14,7 @@
 - Asking if you want to copy to clipboard or not.
 - Asking if you want to see the file in your directory or not.
 
-# Todo
-- when the file is not in your directory, ask if you want to create the file that has a 1 or an increasing number in the name.
-- 
+# Todo List
 # Credit
 
 - LazzzyJava for helping
