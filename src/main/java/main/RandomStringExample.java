@@ -9,7 +9,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 public class RandomStringExample {
-    public static boolean getAlphaNumericString(int n) {
+    public static void getAlphaNumericString(int n) {
         // length is bounded by 256 Character
         byte[] array = new byte[256];
         new Random().nextBytes(array);
@@ -70,7 +70,6 @@ public class RandomStringExample {
             System.exit(0);
         }
         // end of method
-        return false;
     }
 
     // Stores the output in your clipboard...
@@ -82,10 +81,7 @@ public class RandomStringExample {
 
 
     public static void main(String[] args) {
-
-        // size of random alphanumeric string
-        int n = 50;
-
+        getAlphaNumericString(20);
         // Load everything with delay of 142 nanoseconds :P
         try {
             Thread.sleep(0, 142);
@@ -93,7 +89,5 @@ public class RandomStringExample {
             e.printStackTrace();
         }
 
-        // Call the method
-        getAlphaNumericString(n);
     }
 }
