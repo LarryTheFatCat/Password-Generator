@@ -58,7 +58,7 @@ public class RandomStringExample {
 
             JOptionPane.showMessageDialog(null, "Trying...", "Output", JOptionPane.INFORMATION_MESSAGE);
             JOptionPane.showMessageDialog(null, "Saved!", "Output", JOptionPane.INFORMATION_MESSAGE);
-            try (PrintWriter o = new PrintWriter("output-info.txt", String.valueOf(StandardCharsets.UTF_8))) {
+            try (PrintWriter o = new PrintWriter("output-info.json", String.valueOf(StandardCharsets.UTF_8))) {
                 o.println(r);
                 o.println("There are a total of " + r.length() + " characters in this string.");
             } catch (Exception e) {
