@@ -12,12 +12,11 @@
 - Creates a text file that stores the output 
 
 # Todo
-- Change colour of the JDialog to grey because having it white is so bright with no lights on.
-- Use flatLaF instead of the default look and feel.
-- Have a logo in the top left corner of your dialog using FlatLaF.
-- Change font using FlatLaF.
-- Change Font Size.
-- Maybe rewrite comments to be more clear.
+- Change the output to a JSON file.
+- use PrintWriter to print txt in there storing output of randomString.
+- Include new dialogs in case it works or not.
+- Include the option to copy to clipboard or not. <- that's done already.
+- Check if the file is already in your directory, if it is then provide a Dialog saying that it is already there.
 
 # Credit
 
