@@ -16,7 +16,6 @@
 
 # Todo
 
-- Change the output to a JSON file.
 - Check if the file is already in your directory, if it is then provide a Dialog saying that it is already there.
 - Ask if you want to see the amount of characters inside the file. provided yes, it will show the amount of characters. Provided no it will not show the amount of characters.
 - Ask if you want to see the location of the file. Provided yes, it will show the location of the file in a JOptionPane. Provided no it will not show the location of the file.
