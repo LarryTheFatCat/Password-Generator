@@ -26,6 +26,7 @@ public class RandomStringExample {
         String randomString = new String(array, StandardCharsets.UTF_8);
         StringBuilder r = new StringBuilder();
 
+
         // Append first 20 alphanumeric characters
         for (int k = 0; k < randomString.length(); k++) {
             char ch = randomString.charAt(k);
@@ -39,7 +40,6 @@ public class RandomStringExample {
                 n--;
             }
         }
-
         // Print the generated String in the Dialog Box.
         JOptionPane.showMessageDialog(null, r + "\n" + "Click Ok to see your options...", "output", JOptionPane.INFORMATION_MESSAGE);
 
@@ -54,13 +54,14 @@ public class RandomStringExample {
             JOptionPane.showMessageDialog(null, "Cancelled!", "Output", JOptionPane.INFORMATION_MESSAGE);
         }
 
-        int r1 = JOptionPane.showConfirmDialog(null, "Do you want to see your password on your desktop?.", "Output", JOptionPane.YES_NO_OPTION);
+        int r1 = JOptionPane.showConfirmDialog(null, "Would you like it as a file?.", "Output", JOptionPane.YES_NO_OPTION);
         if (r1 == JOptionPane.YES_OPTION) {
 
-            JOptionPane.showMessageDialog(null, "Check your Main File Directory!", "Output", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Trying...", "Output", JOptionPane.INFORMATION_MESSAGE);
             JOptionPane.showMessageDialog(null, "Saved!", "Output", JOptionPane.INFORMATION_MESSAGE);
             try (PrintWriter o = new PrintWriter("output-info.txt", String.valueOf(StandardCharsets.UTF_8))) {
                 o.println(r);
+                o.println("There are a total of " + r.length() + " characters in this string.");
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
