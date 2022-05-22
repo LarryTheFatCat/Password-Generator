@@ -17,6 +17,7 @@
 - Include new dialogs in case it works or not.
 - Include the option to copy to clipboard or not. <- that's done already.
 - Check if the file is already in your directory, if it is then provide a Dialog saying that it is already there.
+-
 
 # Credit
 
