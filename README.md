@@ -15,9 +15,6 @@
 - Asking if you want to see the file in your directory or not.
 
 # Todo
-- Ask if you want to see the location of the file. Provided yes, it will show the location of the file in a JOptionPane. Provided no it will not show the location of the file.
-- JOptionPane for when the file is already in your directory.
-- JOptionPane for when the file is not in your directory.
 - when the file is not in your directory, ask if you want to create the file that has a 1 or an increasing number in the name.
 - 
 # Credit
