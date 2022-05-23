@@ -5,10 +5,17 @@ plugins {
 group 'main'
 version '1.0-SNAPSHOT'
 
+dependencies {
+}
+
 jar {
     manifest {
         attributes(
                 'Main-Class': 'main.RandomStringExample'
         )
     }
+}
+
+repositories {
+    mavenCentral()
 }

@@ -12,11 +12,12 @@ import java.util.Random;
 public class RandomStringExample {
 
     public static void getAlphaNumericString(int n) {
+
         // length is bounded by 256 Chars as per the Ascii Table (2^8).
         byte[] array = new byte[256];
         new Random().nextBytes(array);
 
-        // Look and Feel is set to Windows 11 (Or your preferred OS)
+        // Look and Feel is set to Windows 11 (On Windows Only)
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
