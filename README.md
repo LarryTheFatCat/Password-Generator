@@ -4,8 +4,10 @@
 - I am in love with try-catch
 
 # Todo List
-
-
+- Input asking if you want a custom tag file (JSON, TXR, XML, YAML, etc.)
+- Fix random periods in the JOptionPane Text.
+- Change the load time from nanoseconds to milliseconds.
+- Implement a way to automatically close out of the JOptionPane if the user does not click Ok in a specific amount of time.
 # Credit and License 
 
 - LazzzyJava for helping
