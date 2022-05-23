@@ -47,8 +47,6 @@ public class RandomStringExample {
         } else {
             JOptionPane.showMessageDialog(null, "Sorry to hear you won't be creating one...");
         }
-        JOptionPane.showMessageDialog(null, r, "Output", JOptionPane.INFORMATION_MESSAGE);
-        JOptionPane.showMessageDialog(null, "Please Continue", "Output", JOptionPane.INFORMATION_MESSAGE);
         // Use OptionPane to show the options
         int r2 = JOptionPane.showConfirmDialog(null, "Would you like it copied to your clipboard?", "Output", JOptionPane.YES_NO_OPTION);
         if (r2 == JOptionPane.YES_OPTION) {
