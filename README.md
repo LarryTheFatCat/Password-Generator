@@ -1,10 +1,9 @@
 # Random String Generator in Java
 
-- Running the jar will provide a popup with your password :)
 - Developed with Java 8
 - I am in love with try-catch
 
-# Todo List
+# Todo List 
 
 # Credit and License 
 

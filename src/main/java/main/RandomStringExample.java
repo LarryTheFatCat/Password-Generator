@@ -41,9 +41,8 @@ public class RandomStringExample {
             }
         }
 
-        // Print the generated String in the Dialog Box.
-        JOptionPane.showMessageDialog(null, r + "\n" + "Click Ok to see your options...", "output", JOptionPane.INFORMATION_MESSAGE);
-
+        JOptionPane.showMessageDialog(null, r, "Output", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Please Continue", "Output", JOptionPane.INFORMATION_MESSAGE);
         // Use OptionPane to show the options
         int r2 = JOptionPane.showConfirmDialog(null, "Would you like it copied to your clipboard?", "Output", JOptionPane.YES_NO_OPTION);
         if (r2 == JOptionPane.YES_OPTION) {
@@ -66,9 +65,9 @@ public class RandomStringExample {
 
         int r1 = JOptionPane.showConfirmDialog(null, "Would you like it as a file?.", "Output", JOptionPane.YES_NO_OPTION);
         if (r1 == JOptionPane.YES_OPTION) {
-            if(!new File("output-info.json").exists()) {
+            if(!new File("Output-info.json").exists()) {
                 JOptionPane.showMessageDialog(null, "File not Found, Creating file...", "Output", JOptionPane.INFORMATION_MESSAGE);
-                try (PrintWriter o = new PrintWriter("output-info.json", String.valueOf(StandardCharsets.UTF_8))) {
+                try (PrintWriter o = new PrintWriter("Output-info.json", String.valueOf(StandardCharsets.UTF_8))) {
                     o.println(r);
                     o.println("There are a total of " + r.length() + " characters in this string.");
                 } catch (Exception e) {
@@ -78,10 +77,10 @@ public class RandomStringExample {
                 JOptionPane.showMessageDialog(null, "Checking...", "Output", JOptionPane.INFORMATION_MESSAGE);
                 JOptionPane.showMessageDialog(null, "File already, please delete the file and then re-run the program!", "Output", JOptionPane.INFORMATION_MESSAGE);
             }
-            // Ask if you want to see the location of output-info.json file.
+            // Ask if you want to see the location of Output-info.json file.
             int r4 = JOptionPane.showConfirmDialog(null, "Would you like to see the location of the file?", "Output", JOptionPane.YES_NO_OPTION);
             if (r4 == JOptionPane.YES_OPTION) {
-                JOptionPane.showMessageDialog(null, "The file is located at: " + new File("output-info.json").getAbsolutePath(), "Output", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "The file is located at: " + new File("Output-info.json").getAbsolutePath(), "Output", JOptionPane.INFORMATION_MESSAGE);
             } else {
                 JOptionPane.showMessageDialog(null, "Cancelled!", "Output", JOptionPane.INFORMATION_MESSAGE);
             }
@@ -90,7 +89,7 @@ public class RandomStringExample {
             if (r5 == JOptionPane.YES_OPTION) {
                 JOptionPane.showMessageDialog(null, "Opening file...", "Output", JOptionPane.INFORMATION_MESSAGE);
                 try {
-                    Desktop.getDesktop().open(new File("output-info.json"));
+                    Desktop.getDesktop().open(new File("Output-info.json"));
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
