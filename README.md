@@ -4,7 +4,7 @@
 - I am in love with try-catch
 
 # Todo List 
-- JOptionPane asking if you would like to generate a new Password.
+
 # Credit and License 
 
 - LazzzyJava for helping

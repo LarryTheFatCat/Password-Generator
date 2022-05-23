@@ -41,6 +41,12 @@ public class RandomStringExample {
             }
         }
 
+        int r7 = JOptionPane.showConfirmDialog(null, "Would you like to generate a password?", "Password Generator", JOptionPane.YES_NO_OPTION);
+        if(r7 == JOptionPane.YES_OPTION){
+            JOptionPane.showMessageDialog(null, "Your new password is " + r);
+        } else {
+            JOptionPane.showMessageDialog(null, "Sorry to hear you won't be creating one...");
+        }
         JOptionPane.showMessageDialog(null, r, "Output", JOptionPane.INFORMATION_MESSAGE);
         JOptionPane.showMessageDialog(null, "Please Continue", "Output", JOptionPane.INFORMATION_MESSAGE);
         // Use OptionPane to show the options
