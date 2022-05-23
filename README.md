@@ -5,8 +5,7 @@
 
 # Todo List 
 - Install FlatLaF Theme.
-  - Switch to Pom.xml for dependency management and build.
-
+- 
 # Credit and License 
 
 - LazzzyJava for helping
