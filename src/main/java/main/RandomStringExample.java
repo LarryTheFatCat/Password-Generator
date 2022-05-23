@@ -43,67 +43,67 @@ public class RandomStringExample {
         }
         int r7 = JOptionPane.showConfirmDialog(null, "Would you like to generate a password?", "Password Generator", JOptionPane.YES_NO_OPTION);
         if(r7 == JOptionPane.YES_OPTION){
-            JOptionPane.showMessageDialog(null, "Your new password is " + r);
+            JOptionPane.showMessageDialog(null, "Your new password is " + r, "Password Generator", JOptionPane.QUESTION_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(null, "Sorry to hear you won't be creating one...");
         }
         // Use OptionPane to show the options
-        int r2 = JOptionPane.showConfirmDialog(null, "Would you like it copied to your clipboard?", "Output", JOptionPane.YES_NO_OPTION);
+        int r2 = JOptionPane.showConfirmDialog(null, "Would you like it copied to your clipboard?", "Password Generator", JOptionPane.YES_NO_OPTION);
         if (r2 == JOptionPane.YES_OPTION) {
-            JOptionPane.showMessageDialog(null, "Copying to clipboard...", "Output", JOptionPane.INFORMATION_MESSAGE);
-            JOptionPane.showMessageDialog(null, "Copied to clipboard!", "Output", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Copying to clipboard...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Copied to clipboard!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
             sendToClipBoard(r);
         } else {
-            JOptionPane.showMessageDialog(null, "Canceling...", "Output", JOptionPane.INFORMATION_MESSAGE);
-            JOptionPane.showMessageDialog(null, "Cancelled!", "Output", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Canceling...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Cancelled!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
         }
 
         // Ask if you want to see the amount of chars inside the file
-        int r3 = JOptionPane.showConfirmDialog(null, "Would you like to see the amount of characters in the file before you create a file?", "Output", JOptionPane.YES_NO_OPTION);
+        int r3 = JOptionPane.showConfirmDialog(null, "Would you like to see the amount of characters in the file before you create a file?", "Password Generator", JOptionPane.YES_NO_OPTION);
         if (r3 == JOptionPane.YES_OPTION) {
-            JOptionPane.showMessageDialog(null, "There are a total of " + r.length() + " characters in this string.", "Output", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "There are a total of " + r.length() + " characters in this string.", "Password Generator", JOptionPane.QUESTION_MESSAGE);
         } else {
-            JOptionPane.showMessageDialog(null, "Canceling...", "Output", JOptionPane.INFORMATION_MESSAGE);
-            JOptionPane.showMessageDialog(null, "Cancelled!", "Output", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Canceling...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Cancelled!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
         }
 
 
-        int r1 = JOptionPane.showConfirmDialog(null, "Would you like it as a file?.", "Output", JOptionPane.YES_NO_OPTION);
+        int r1 = JOptionPane.showConfirmDialog(null, "Would you like it as a file?", "Password Generator", JOptionPane.YES_NO_OPTION);
         if (r1 == JOptionPane.YES_OPTION) {
-            if(!new File("Output-info.json").exists()) {
-                JOptionPane.showMessageDialog(null, "File not Found, Creating file...", "Output", JOptionPane.INFORMATION_MESSAGE);
-                try (PrintWriter o = new PrintWriter("Output-info.json", String.valueOf(StandardCharsets.UTF_8))) {
+            if(!new File("Password Generator-info.json").exists()) {
+                JOptionPane.showMessageDialog(null, "File not Found, Creating file...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
+                try (PrintWriter o = new PrintWriter("Password Generator-info.json", String.valueOf(StandardCharsets.UTF_8))) {
                     o.println(r);
                     o.println("There are a total of " + r.length() + " characters in this string.");
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "Checking...", "Output", JOptionPane.INFORMATION_MESSAGE);
-                JOptionPane.showMessageDialog(null, "File already, please delete the file and then re-run the program!", "Output", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Checking...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "File already, please delete the file and then re-run the program!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
             }
-            // Ask if you want to see the location of Output-info.json file.
-            int r4 = JOptionPane.showConfirmDialog(null, "Would you like to see the location of the file?", "Output", JOptionPane.YES_NO_OPTION);
+            // Ask if you want to see the location of Password Generator-info.json file.
+            int r4 = JOptionPane.showConfirmDialog(null, "Would you like to see the location of the file?", "Password Generator", JOptionPane.YES_NO_OPTION);
             if (r4 == JOptionPane.YES_OPTION) {
-                JOptionPane.showMessageDialog(null, "The file is located at: " + new File("Output-info.json").getAbsolutePath(), "Output", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "The file is located at: " + new File("Password Generator-info.json").getAbsolutePath(), "Password Generator", JOptionPane.QUESTION_MESSAGE);
             } else {
-                JOptionPane.showMessageDialog(null, "Cancelled!", "Output", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Cancelled!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
             }
             // Open the file that already exists.
-            int r5 = JOptionPane.showConfirmDialog(null, "Would you like to open the file?", "Output", JOptionPane.YES_NO_OPTION);
+            int r5 = JOptionPane.showConfirmDialog(null, "Would you like to open the file?", "Password Generator", JOptionPane.YES_NO_OPTION);
             if (r5 == JOptionPane.YES_OPTION) {
-                JOptionPane.showMessageDialog(null, "Opening file...", "Output", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Opening file...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
                 try {
-                    Desktop.getDesktop().open(new File("Output-info.json"));
+                    Desktop.getDesktop().open(new File("Password Generator-info.json"));
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "Cancelled!", "Output", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Cancelled!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
             }
         } else {
-            JOptionPane.showMessageDialog(null, "Canceling save...", "Output", JOptionPane.INFORMATION_MESSAGE);
-            JOptionPane.showMessageDialog(null, "Canceled!", "Output", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Canceling save...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Canceled!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
 
             System.exit(0);
         }
