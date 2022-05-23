@@ -41,7 +41,6 @@ public class RandomStringExample {
                 n--;
             }
         }
-
         int r7 = JOptionPane.showConfirmDialog(null, "Would you like to generate a password?", "Password Generator", JOptionPane.YES_NO_OPTION);
         if(r7 == JOptionPane.YES_OPTION){
             JOptionPane.showMessageDialog(null, "Your new password is " + r);
@@ -67,6 +66,7 @@ public class RandomStringExample {
             JOptionPane.showMessageDialog(null, "Canceling...", "Output", JOptionPane.INFORMATION_MESSAGE);
             JOptionPane.showMessageDialog(null, "Cancelled!", "Output", JOptionPane.INFORMATION_MESSAGE);
         }
+
 
         int r1 = JOptionPane.showConfirmDialog(null, "Would you like it as a file?.", "Output", JOptionPane.YES_NO_OPTION);
         if (r1 == JOptionPane.YES_OPTION) {
@@ -123,10 +123,34 @@ public class RandomStringExample {
         getAlphaNumericString(20);
         // Thread sleeps after 142 nanoseconds it wakes up and prints the generated String.
         try {
-            Thread.sleep(0, 142);
+            Thread.sleep(142);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
     }
 }
+/*
+
+
+        String fileExtension = JOptionPane.showInputDialog("Enter file extension.");
+        if(fileExtension.equals("")){
+            JOptionPane.showMessageDialog(null, "No file extension entered. Defaulting to .txt");
+            fileExtension = ".txt";
+            try{
+                PrintWriter writer = new PrintWriter("randomString" + fileExtension, "UTF-8");
+                writer.println(r);
+                writer.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            try{
+                PrintWriter writer = new PrintWriter("randomString" + fileExtension, "UTF-8");
+                writer.println(r);
+                writer.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+ */
