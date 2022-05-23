@@ -41,7 +41,6 @@ public class RandomStringExample {
             }
         }
 
-
         // Print the generated String in the Dialog Box.
         JOptionPane.showMessageDialog(null, r + "\n" + "Click Ok to see your options...", "output", JOptionPane.INFORMATION_MESSAGE);
 
@@ -76,15 +75,26 @@ public class RandomStringExample {
                     throw new RuntimeException(e);
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "File found!", "Output", JOptionPane.INFORMATION_MESSAGE);
-                JOptionPane.showMessageDialog(null, "File already exists, would you like a new file with a extra number?", "Output", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Checking...", "Output", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "File already, please delete the file and then re-run the program!", "Output", JOptionPane.INFORMATION_MESSAGE);
             }
             // Ask if you want to see the location of output-info.json file.
             int r4 = JOptionPane.showConfirmDialog(null, "Would you like to see the location of the file?", "Output", JOptionPane.YES_NO_OPTION);
             if (r4 == JOptionPane.YES_OPTION) {
                 JOptionPane.showMessageDialog(null, "The file is located at: " + new File("output-info.json").getAbsolutePath(), "Output", JOptionPane.INFORMATION_MESSAGE);
             } else {
-                JOptionPane.showMessageDialog(null, "Canceling...", "Output", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Cancelled!", "Output", JOptionPane.INFORMATION_MESSAGE);
+            }
+            // Open the file that already exists.
+            int r5 = JOptionPane.showConfirmDialog(null, "Would you like to open the file?", "Output", JOptionPane.YES_NO_OPTION);
+            if (r5 == JOptionPane.YES_OPTION) {
+                JOptionPane.showMessageDialog(null, "Opening file...", "Output", JOptionPane.INFORMATION_MESSAGE);
+                try {
+                    Desktop.getDesktop().open(new File("output-info.json"));
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
+            } else {
                 JOptionPane.showMessageDialog(null, "Cancelled!", "Output", JOptionPane.INFORMATION_MESSAGE);
             }
         } else {
@@ -93,9 +103,6 @@ public class RandomStringExample {
 
             System.exit(0);
         }
-
-
-
 
         // end of method getAlphaNumericString.
     }
