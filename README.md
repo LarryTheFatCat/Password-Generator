@@ -4,8 +4,7 @@
 - I am in love with try-catch
 
 # Todo List
-- Input asking if you want a custom tag file (JSON, TXR, XML, YAML, etc.)
-- Implement a way to automatically close out of the JOptionPane if the user does not click Ok in a specific amount of time.
+- fix the stupid error when r1 if bracket is set to the one that is at the last one meaning if that ends then the whole program will crash.
 # Credit and License 
 
 - LazzzyJava for helping
