@@ -16,6 +16,8 @@ public class RandomStringExample {
     public static final String author = "TwoOneTwo";
     public static final String github_account = "https://github.com/TwoThreeTwo";
     public static final String github_repo = "https://github.com/TwoThreeTwo/RandomStringGenerator";
+    
+    public static final String file_name = "output-information.";
 
 
     public static void getAlphaNumericString(int n) {
@@ -82,7 +84,7 @@ public class RandomStringExample {
                     JOptionPane.showMessageDialog(null, "No file extension entered. Defaulting to .txt");
                     fileExtension = ".txt";
                     try {
-                        PrintWriter writer = new PrintWriter("randomString." + fileExtension, "UTF-8");
+                        PrintWriter writer = new PrintWriter(file_name + fileExtension, "UTF-8");
                         writer.println(r);
                         writer.close();
                     } catch (Exception e) {
@@ -91,7 +93,7 @@ public class RandomStringExample {
 
                 } else {
                     try {
-                        PrintWriter writer = new PrintWriter("randomString." + fileExtension, "UTF-8");
+                        PrintWriter writer = new PrintWriter(file_name + fileExtension, "UTF-8");
                         writer.println(r);
                         writer.close();
                     } catch (Exception e) {
@@ -99,7 +101,7 @@ public class RandomStringExample {
                     }
                 }
             } else {
-                if (!new File("Password Generator-info." + fileExtension).exists()) {
+                if (!new File(file_name + fileExtension).exists()) {
                     JOptionPane.showMessageDialog(null, "File found, please delete or use a new extension!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
                 } else {
                     JOptionPane.showMessageDialog(null, "Checking...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
@@ -112,7 +114,7 @@ public class RandomStringExample {
                 // Ask if you want to see the location of Password Generator-info.json file.
                 int r4 = JOptionPane.showConfirmDialog(null, "Would you like to see the location of the file?", "Password Generator", JOptionPane.YES_NO_OPTION);
                 if (r4 == JOptionPane.YES_OPTION) {
-                    JOptionPane.showMessageDialog(null, "The file is located at: " + new File("Password Generator-info.json").getAbsolutePath(), "Password Generator", JOptionPane.QUESTION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "The file is located at: " + new File(file_name + fileExtension).getAbsolutePath(), "Password Generator", JOptionPane.QUESTION_MESSAGE);
                 } else {
                     JOptionPane.showMessageDialog(null, "Cancelled!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
                 }
@@ -123,7 +125,7 @@ public class RandomStringExample {
                 if (r5 == JOptionPane.YES_OPTION) {
                     JOptionPane.showMessageDialog(null, "Opening file...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
                     try {
-                        Desktop.getDesktop().open(new File("Password Generator-info.json"));
+                        Desktop.getDesktop().open(new File(file_name + fileExtension));
                     } catch (Exception e) {
                         throw new RuntimeException(e);
                     }
@@ -145,11 +147,10 @@ public class RandomStringExample {
             JOptionPane.showMessageDialog(null, "Canceling...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
             JOptionPane.showMessageDialog(null, "Cancelled!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
         }
-        JOptionPane.showMessageDialog(null,"Thank you for using " + main_name + "\nThe person who created this program is " + author + "\nThe version this program is currently on is " + version + "\n If you have the JAR file but not the repository, you can check it out here " + github_repo + "\n The GitHub account that currently made it is " + github_account , "Password Generator", JOptionPane.QUESTION_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Thank you for using " + main_name + version + "\nThe person who created this program is " + author + "\nThe version this program is currently on is " + version + "\n If you have the JAR file but not the repository, you can check it out here " + github_repo + "\n The GitHub account that currently made it is " + github_account , "Password Generator", JOptionPane.QUESTION_MESSAGE);
+        System.exit(0);
+    } // End of main method
 
-    }
-
-    // end of method getAlphaNumericString.
 
     // Method to copy the generated String to the clipboard.
     private static void sendToClipBoard(StringBuilder stringBuilder) {
