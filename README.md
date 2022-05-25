@@ -3,8 +3,7 @@
 - Developed with Java 8
 
 # Todo List
-- Orignal issue hath been fixed but this created another issue where anything after you wanting to create a file and responding in no will cancel the entire project.
-- 
+ 
 # Credit and License 
 
 - LazzzyJava for helping
