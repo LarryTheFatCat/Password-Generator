@@ -10,7 +10,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 public class RandomStringExample {
-    
+
     public static final String main_name = "PasswordGenerator";
     public static final String version = "Version 1.0";
     public static final String author = "TwoOneTwo";
@@ -136,8 +136,6 @@ public class RandomStringExample {
         } else{
             JOptionPane.showMessageDialog(null, "Canceling save...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
             JOptionPane.showMessageDialog(null, "Canceled!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
-
-            System.exit(0);
         }
         // Ask if you want to see the amount of chars inside the file
         int r3 = JOptionPane.showConfirmDialog(null, "Would you like to see the amount of characters in the file before you create a file?", "Password Generator", JOptionPane.YES_NO_OPTION);
