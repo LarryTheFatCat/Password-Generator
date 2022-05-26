@@ -3,7 +3,7 @@
 - Developed with Java 8
 
 # Todo List
-- 
+- Add a check for the file extension.
 # Credit and License 
 
 - LazzzyJava for helping

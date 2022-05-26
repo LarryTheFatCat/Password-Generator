@@ -1,12 +1,7 @@
-plugins {
-    id 'java'
-}
+apply plugin: 'java'
 
 group 'main'
 version '1.0-SNAPSHOT'
-
-dependencies {
-}
 
 jar {
     manifest {
@@ -14,8 +9,4 @@ jar {
                 'Main-Class': 'main.RandomStringExample'
         )
     }
-}
-
-repositories {
-    mavenCentral()
 }

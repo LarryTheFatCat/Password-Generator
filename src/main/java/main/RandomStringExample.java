@@ -12,9 +12,13 @@ import java.util.Random;
 public class RandomStringExample {
 
     public static final String main_name = "PasswordGenerator";
+
     public static final String version = "Version 1.0";
+
     public static final String author = "TwoOneTwo";
+
     public static final String github_account = "https://github.com/TwoThreeTwo";
+
     public static final String github_repo = "https://github.com/TwoThreeTwo/RandomStringGenerator";
     
     public static final String file_name = "output-information.";
@@ -162,7 +166,7 @@ public class RandomStringExample {
     // Main method
     public static void main(String[] args) {
         getAlphaNumericString(20);
-        // Thread sleeps after 142 nanoseconds it wakes up and prints the generated String.
+        // Thread sleeps after 142 milliseconds it wakes up and prints the generated String.
         try {
             Thread.sleep(142);
         } catch (InterruptedException e) {
