@@ -11,17 +11,17 @@ import java.util.Random;
 
 public class RandomStringExample {
 
-    public static final String main_name = "PasswordGenerator";
+    public static final String mn = "PasswordGenerator";
 
-    public static final String version = "Version 1.0";
+    public static final String v = "v 1.0";
 
-    public static final String author = "TwoOneTwo";
+    public static final String a = "TwoOneTwo";
 
-    public static final String github_account = "https://github.com/TwoThreeTwo";
+    public static final String ghAcc = "https://github.com/TwoThreeTwo";
 
-    public static final String github_repo = "https://github.com/TwoThreeTwo/RandomStringGenerator";
+    public static final String ghRepo = "https://github.com/TwoThreeTwo/RandomStringGenerator";
+    public static final String fn = "output-information.";
     
-    public static final String file_name = "output-information.";
 
 
     public static void getAlphaNumericString(int n) {
@@ -55,7 +55,7 @@ public class RandomStringExample {
         }
         int r7 = JOptionPane.showConfirmDialog(null, "Would you like to generate a password?", "Password Generator", JOptionPane.YES_NO_OPTION);
         if (r7 == JOptionPane.YES_OPTION) {
-            JOptionPane.showMessageDialog(null, "Your new password is " + r, main_name, JOptionPane.QUESTION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Your new password is " + r, mn, JOptionPane.QUESTION_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(null, "Sorry to hear you won't be creating one...");
         }
@@ -85,7 +85,7 @@ public class RandomStringExample {
                     JOptionPane.showMessageDialog(null, "No file extension entered. Defaulting to .txt");
                     fileExtension = ".txt";
                     try {
-                        PrintWriter writer = new PrintWriter(file_name + fileExtension, "UTF-8");
+                        PrintWriter writer = new PrintWriter(fn + fileExtension, "UTF-8");
                         writer.println(r);
                         writer.close();
                     } catch (Exception e) {
@@ -94,7 +94,7 @@ public class RandomStringExample {
 
                 } else {
                     try {
-                        PrintWriter writer = new PrintWriter(file_name + fileExtension, "UTF-8");
+                        PrintWriter writer = new PrintWriter(fn + fileExtension, "UTF-8");
                         writer.println(r);
                         writer.close();
                     } catch (Exception e) {
@@ -102,7 +102,7 @@ public class RandomStringExample {
                     }
                 }
             } else {
-                if (!new File(file_name + fileExtension).exists()) {
+                if (!new File(fn + fileExtension).exists()) {
                     JOptionPane.showMessageDialog(null, "File found, please delete or use a new extension!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
                 } else {
                     JOptionPane.showMessageDialog(null, "Checking...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
@@ -115,7 +115,7 @@ public class RandomStringExample {
                 // Ask if you want to see the location of Password Generator-info.json file.
                 int r4 = JOptionPane.showConfirmDialog(null, "Would you like to see the location of the file?", "Password Generator", JOptionPane.YES_NO_OPTION);
                 if (r4 == JOptionPane.YES_OPTION) {
-                    JOptionPane.showMessageDialog(null, "The file is located at: " + new File(file_name + fileExtension).getAbsolutePath(), "Password Generator", JOptionPane.QUESTION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "The file is located at: " + new File(fn + fileExtension).getAbsolutePath(), "Password Generator", JOptionPane.QUESTION_MESSAGE);
                 } else {
                     JOptionPane.showMessageDialog(null, "Cancelled!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
                 }
@@ -132,7 +132,7 @@ public class RandomStringExample {
                     }
                     JOptionPane.showMessageDialog(null, "Opening file...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
                     try {
-                        Desktop.getDesktop().open(new File(file_name + fileExtension));
+                        Desktop.getDesktop().open(new File(fn + fileExtension));
                     } catch (Exception e) {
                         throw new RuntimeException(e);
                     }
@@ -154,11 +154,10 @@ public class RandomStringExample {
             JOptionPane.showMessageDialog(null, "Canceling...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
             JOptionPane.showMessageDialog(null, "Cancelled!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
         }
-        JOptionPane.showMessageDialog(null,"Thank you for using " + main_name +  " " + version + "\nThe person who created this program is " + author + "\nThe version this program is currently on is " + version + "\n If you have the JAR file but not the repository, you can check it out here " + github_repo + "\n The GitHub account that currently made it is " + github_account , "Password Generator", JOptionPane.QUESTION_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Thank you for using " + mn +  " " + v + "\nThe person who created this program is " + a + "\nThe v this program is currently on is " + v + "\n If you have the JAR file but not the repository, you can check it out here " + ghRepo + "\n The GitHub account that currently made it is " + ghAcc , "Password Generator", JOptionPane.QUESTION_MESSAGE);
         System.exit(0);
-    } // End of main method
-
-
+    } // End of main method for Password Generator. 
+    
 
     // Method to copy the generated String to the clipboard.
     private static void sendToClipBoard(StringBuilder stringBuilder) {
@@ -170,7 +169,7 @@ public class RandomStringExample {
     // Main method
     public static void main(String[] args) {
         getAlphaNumericString(20);
-        // Thread sleeps after 142 milliseconds it wakes up and prints the generated String.
+        // Wakes up after 142 milliseconds.
         try {
             Thread.sleep(142);
         } catch (InterruptedException e) {
