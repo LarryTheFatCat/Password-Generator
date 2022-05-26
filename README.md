@@ -4,6 +4,7 @@
 
 # Todo List 
 - Change JOptionPane types to their specific use.
+- Change the JOptionPane title to the var labeled "mn".
 # Credit and License 
 
 - LazzzyJava for helping
