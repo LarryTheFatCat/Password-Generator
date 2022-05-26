@@ -73,17 +73,14 @@ public class RandomStringExample {
         }
 
 
-        // Fix this shit over here bro I'm about to kill my self
-
-
-
-
+        // Use OptionPane to show the options
         int r1 = JOptionPane.showConfirmDialog(null, "Would you like it as a file?", "Password Generator", JOptionPane.YES_NO_OPTION);
         if (r1 == JOptionPane.YES_OPTION) {
             int r8 = JOptionPane.showConfirmDialog(null, "Would you like a custom file extension?", "Password Generator", JOptionPane.YES_NO_OPTION);
             String fileExtension = null;
             if (r8 == JOptionPane.YES_OPTION) {
-                fileExtension = JOptionPane.showInputDialog("Enter file extension.");
+                JOptionPane.showMessageDialog(null, "Please enter a actual file extension or else the default check will not work...", "Password Generator", JOptionPane.PLAIN_MESSAGE);
+                fileExtension = JOptionPane.showInputDialog(null, "Enter file extension.", "Password Generator", JOptionPane.PLAIN_MESSAGE);
                 if (fileExtension.equals("")) {
                     JOptionPane.showMessageDialog(null, "No file extension entered. Defaulting to .txt");
                     fileExtension = ".txt";
@@ -127,6 +124,12 @@ public class RandomStringExample {
                 // Open the file that already exists.
                 int r5 = JOptionPane.showConfirmDialog(null, "Would you like to open the file?", "Password Generator", JOptionPane.YES_NO_OPTION);
                 if (r5 == JOptionPane.YES_OPTION) {
+                    // Check if file has an invalid extension when opening.
+                    assert false;
+                    if (fileExtension.equals(".meow")) {
+                        JOptionPane.showMessageDialog(null, "Invalid file extension, please use a valid file extension.", "Password Generator", JOptionPane.QUESTION_MESSAGE);
+                        System.exit(0);
+                    }
                     JOptionPane.showMessageDialog(null, "Opening file...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
                     try {
                         Desktop.getDesktop().open(new File(file_name + fileExtension));
@@ -139,7 +142,7 @@ public class RandomStringExample {
 
 
             }
-        } else{
+        } else {
             JOptionPane.showMessageDialog(null, "Canceling save...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
             JOptionPane.showMessageDialog(null, "Canceled!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
         }
@@ -151,9 +154,10 @@ public class RandomStringExample {
             JOptionPane.showMessageDialog(null, "Canceling...", "Password Generator", JOptionPane.QUESTION_MESSAGE);
             JOptionPane.showMessageDialog(null, "Cancelled!", "Password Generator", JOptionPane.QUESTION_MESSAGE);
         }
-        JOptionPane.showMessageDialog(null,"Thank you for using " + main_name + version + "\nThe person who created this program is " + author + "\nThe version this program is currently on is " + version + "\n If you have the JAR file but not the repository, you can check it out here " + github_repo + "\n The GitHub account that currently made it is " + github_account , "Password Generator", JOptionPane.QUESTION_MESSAGE);
+        JOptionPane.showMessageDialog(null,"Thank you for using " + main_name +  " " + version + "\nThe person who created this program is " + author + "\nThe version this program is currently on is " + version + "\n If you have the JAR file but not the repository, you can check it out here " + github_repo + "\n The GitHub account that currently made it is " + github_account , "Password Generator", JOptionPane.QUESTION_MESSAGE);
         System.exit(0);
     } // End of main method
+
 
 
     // Method to copy the generated String to the clipboard.
