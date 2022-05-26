@@ -3,7 +3,6 @@
 - Developed with Java 8
 
 # Todo List 
-- Shorten active var names
 - Change JOptionPane types to their specific use.
 # Credit and License 
 
