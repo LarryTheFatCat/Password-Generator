@@ -7,6 +7,7 @@ import java.awt.datatransfer.StringSelection;
 import java.io.File;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
+import java.util.Locale;
 import java.util.Random;
 
 import static values.Variables.*;
@@ -41,6 +42,8 @@ public class RandomStringExample {
                 n--;
             }
         }
+
+
         int r7 = JOptionPane.showConfirmDialog(null, "Would you like to generate a password?", mn, JOptionPane.YES_NO_OPTION);
         if (r7 == JOptionPane.YES_OPTION) {
             JOptionPane.showMessageDialog(null, "Your new password is " + r, mn, JOptionPane.INFORMATION_MESSAGE);
