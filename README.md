@@ -3,7 +3,6 @@
 - Developed with Java 8
 
 # Todo List
-- Change Button when it asks if you want to generate a new password to "Generate"
 # Credit and License 
 
 - LazzzyJava for helping
