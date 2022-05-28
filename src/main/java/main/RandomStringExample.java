@@ -7,7 +7,6 @@ import java.awt.datatransfer.StringSelection;
 import java.io.File;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
-import java.util.Locale;
 import java.util.Random;
 
 import static values.Variables.*;
@@ -43,19 +42,23 @@ public class RandomStringExample {
             }
         }
 
-
         int r7 = JOptionPane.showConfirmDialog(null, "Would you like to generate a password?", mn, JOptionPane.YES_NO_OPTION);
         if (r7 == JOptionPane.YES_OPTION) {
             JOptionPane.showMessageDialog(null, "Your new password is " + r, mn, JOptionPane.INFORMATION_MESSAGE);
         } else {
             JOptionPane.showMessageDialog(null, "Sorry to hear you won't be creating one...", mn, JOptionPane.INFORMATION_MESSAGE);
+            System.exit(0);
         }
 
+
+        // After 3 seconds, close the JOptionPane and show the next.
 
         // Use OptionPane to show the options
         int r2 = JOptionPane.showConfirmDialog(null, "Would you like it copied to your clipboard?", mn, JOptionPane.YES_NO_OPTION);
         if (r2 == JOptionPane.YES_OPTION) {
-            JOptionPane.showMessageDialog(null, "Copying to clipboard...", mn, JOptionPane.INFORMATION_MESSAGE);
+            // Set timer so that the password is visible for 3 seconds before being closed automatically (if not clicked).
+                JOptionPane.showMessageDialog(null, "Copying to clipboard...", mn, JOptionPane.INFORMATION_MESSAGE);
+                sendToClipBoard(r);
             JOptionPane.showMessageDialog(null, "Copied to clipboard!", mn, JOptionPane.INFORMATION_MESSAGE);
             sendToClipBoard(r);
         } else {
