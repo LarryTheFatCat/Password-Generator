@@ -1,6 +1,7 @@
 package main;
 
 import javax.swing.*;
+import javax.swing.plaf.ColorUIResource;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -17,12 +18,8 @@ public class RandomStringExample {
         byte[] array = new byte[256];
         new Random().nextBytes(array);
 
-        // Look and Feel is set to Windows 11 (On Windows Only)
-        try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        UIManager.put("OptionPane.background", Color.gray);
+        UIManager.put("Panel.background", Color.gray);
 
         // Create a StringBuffer to store the result
         String randomString = new String(array, StandardCharsets.UTF_8);
@@ -133,6 +130,8 @@ public class RandomStringExample {
             JOptionPane.showMessageDialog(null, "Canceling save...", mn, JOptionPane.INFORMATION_MESSAGE);
             JOptionPane.showMessageDialog(null, "Canceled!", mn, JOptionPane.INFORMATION_MESSAGE);
         }
+
+
         // Ask if you want to see the amount of chars inside the file
         int r3 = JOptionPane.showConfirmDialog(null, "Would you like to see the amount of characters in the file before you create a file?", mn, JOptionPane.YES_NO_OPTION);
         if (r3 == JOptionPane.YES_OPTION) {
