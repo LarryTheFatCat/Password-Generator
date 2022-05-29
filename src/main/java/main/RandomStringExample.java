@@ -14,6 +14,8 @@ import static values.Variables.*;
 public class RandomStringExample {
 
     public static void getAlphaNumericString(int n) {
+        // FlatDarkLaf.setup();  //Must be called first of all Swing code as this sets the look and feel to FlatDark.
+
         // length is bounded by 256 Chars as per the Ascii Table (2^8).
         byte[] array = new byte[256];
         new Random().nextBytes(array);
