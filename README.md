@@ -3,6 +3,7 @@
 - Developed with Java 8
 
 # Todo List
+- Change background of JOptionPane to gray.
 # Credit and License 
 
 - LazzzyJava for helping
