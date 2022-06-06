@@ -157,7 +157,7 @@ public class RandomStringExample {
         try {
             Thread.sleep(142);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
     }

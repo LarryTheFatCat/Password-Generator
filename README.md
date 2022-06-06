@@ -3,8 +3,6 @@
 - Developed with Java 8
 
 # Todo List
-- Suppress sun.misc.Unsafe warnings
-- So unicode stuff doesn't get converted into other characters
 
 - Convert to Kotlin? (Future maybe :)
 
