@@ -3,6 +3,8 @@ apply plugin: 'java'
 group 'main'
 version '1.0-SNAPSHOT'
 
+
+
 compileJava {
     // So unicode stuff doesn't get converted into other characters
     options.encoding 'UTF-8'
