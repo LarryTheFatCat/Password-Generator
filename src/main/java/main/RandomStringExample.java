@@ -1,7 +1,6 @@
 package main;
 
 import javax.swing.*;
-import javax.swing.plaf.ColorUIResource;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -14,14 +13,9 @@ import static values.Variables.*;
 public class RandomStringExample {
 
     public static void getAlphaNumericString(int n) {
-        // FlatDarkLaf.setup();  //Must be called first of all Swing code as this sets the look and feel to FlatDark.
-
         // length is bounded by 256 Chars as per the Ascii Table (2^8).
         byte[] array = new byte[256];
         new Random().nextBytes(array);
-
-        UIManager.put("OptionPane.background", Color.gray);
-        UIManager.put("Panel.background", Color.gray);
 
         // Create a StringBuffer to store the result
         String randomString = new String(array, StandardCharsets.UTF_8);
@@ -96,6 +90,8 @@ public class RandomStringExample {
             } else {
                 if (!new File(fn + fileExtension).exists()) {
                     JOptionPane.showMessageDialog(null, "File found, please delete or use a new extension!", mn, JOptionPane.INFORMATION_MESSAGE);
+
+
                 } else {
                     JOptionPane.showMessageDialog(null, "Checking...", mn, JOptionPane.INFORMATION_MESSAGE);
                     JOptionPane.showMessageDialog(null, "File not found, generating new file...", mn, JOptionPane.QUESTION_MESSAGE);
