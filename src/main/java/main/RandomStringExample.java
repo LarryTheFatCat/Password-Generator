@@ -11,7 +11,6 @@ import java.util.Random;
 
 import static values.Variables.*;
 public class RandomStringExample {
-    int n = 20;
     public static void getAlphaNumericString(int n) {
         // length is bounded by 256 Chars as per the Ascii Table (2^8).
         byte[] array = new byte[59];
