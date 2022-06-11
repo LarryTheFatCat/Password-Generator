@@ -5,6 +5,7 @@
 # Todo List
 
 - Convert to Kotlin? (Future maybe :)
+- Include version in each JOptionPane title.
 # Credit and License 
 
 - LazzzyJava for helping
