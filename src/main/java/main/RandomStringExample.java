@@ -1,5 +1,7 @@
 package main;
 
+import jdk.nashorn.internal.runtime.regexp.joni.Regex;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
@@ -7,7 +9,10 @@ import java.awt.datatransfer.StringSelection;
 import java.io.File;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 import static values.Variables.*;
 public class RandomStringExample {
@@ -34,6 +39,7 @@ public class RandomStringExample {
                 n--;
             }
         }
+
         int r7 = JOptionPane.showConfirmDialog(null, "Would you like to generate a password?", mn, JOptionPane.YES_NO_OPTION);
         if (r7 == JOptionPane.YES_OPTION) {
             JOptionPane.showMessageDialog(null, "Your new password is " + r, mn, JOptionPane.INFORMATION_MESSAGE);
@@ -149,6 +155,7 @@ public class RandomStringExample {
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(stringSelection, null);
     }
+
 
     // Main method
     public static void main(String[] args) {

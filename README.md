@@ -5,7 +5,7 @@
 # Todo List
 
 - Convert to Kotlin? (Future maybe :)
-
+- Include "-" for ever ${Int} in the output.
 # Credit and License 
 
 - LazzzyJava for helping
