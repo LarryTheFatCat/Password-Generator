@@ -154,7 +154,7 @@ public class RandomStringExample {
 
     // Method for every 5 characters to add a - to the string.
     private static StringBuilder addDashes(StringBuilder stringBuilder) {
-        for (int i = 0; i < stringBuilder.length(); i++) {
+        for (int i = 1; i < stringBuilder.length(); i++) {
             if (i % 5 == 0) {
                 stringBuilder.insert(i, "-");
             }
