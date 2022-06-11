@@ -5,7 +5,7 @@
 # Todo List
 
 - Convert to Kotlin? (Future maybe :)
-- limit the number of chars being generated to a certain number (e.g. 10).
+- Shorten the code output.
 # Credit and License 
 
 - LazzzyJava for helping
