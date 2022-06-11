@@ -5,7 +5,6 @@
 # Todo List
 
 - Convert to Kotlin? (Future maybe :)
-- Shorten the code output.
 # Credit and License 
 
 - LazzzyJava for helping

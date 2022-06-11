@@ -11,10 +11,10 @@ import java.util.Random;
 
 import static values.Variables.*;
 public class RandomStringExample {
-
+    int n = 20;
     public static void getAlphaNumericString(int n) {
         // length is bounded by 256 Chars as per the Ascii Table (2^8).
-        byte[] array = new byte[256];
+        byte[] array = new byte[59];
         new Random().nextBytes(array);
 
         // Create a StringBuffer to store the result
@@ -35,6 +35,8 @@ public class RandomStringExample {
         }
 
         addDashes(r); // add dashes to the string
+
+
 
         int r7 = JOptionPane.showConfirmDialog(null, "Would you like to generate a password?", mn + " " + v, JOptionPane.YES_NO_OPTION);
         if (r7 == JOptionPane.YES_OPTION) {
@@ -152,6 +154,9 @@ public class RandomStringExample {
         clipboard.setContents(stringSelection, null);
     }
 
+    // Limit the length of the string to n characters and append the result to the StringBuffer r
+
+
     // Method for every 5 characters to add a - to the string.
     private static void addDashes(StringBuilder stringBuilder) {
         for (int i = 1; i < stringBuilder.length(); i++) {
@@ -165,7 +170,7 @@ public class RandomStringExample {
 
     // Main method
     public static void main(String[] args) {
-        getAlphaNumericString(20);
+        getAlphaNumericString(0);
         // Wakes up after 142 milliseconds.
         try {
             Thread.sleep(142);
