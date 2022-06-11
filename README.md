@@ -5,7 +5,6 @@
 # Todo List
 
 - Convert to Kotlin? (Future maybe :)
-- Include version in each JOptionPane title.
 - Fix there being "-" in the first character of the string.
 # Credit and License 
 
