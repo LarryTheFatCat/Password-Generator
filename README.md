@@ -4,8 +4,6 @@
 
 # Todo List
 
-- Return the addDashes to void.
-
 - Convert to Kotlin? (Future maybe :)
 # Credit and License 
 
