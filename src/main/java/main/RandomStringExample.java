@@ -21,7 +21,6 @@ public class RandomStringExample {
         String randomString = new String(array, StandardCharsets.UTF_8);
         StringBuilder r = new StringBuilder();
 
-
         // Append first 20 alphanumeric characters
         for (int k = 0; k < randomString.length(); k++) {
             char ch = randomString.charAt(k);
@@ -34,6 +33,8 @@ public class RandomStringExample {
                 n--;
             }
         }
+
+        addDashes(r); // add dashes to the string
 
         int r7 = JOptionPane.showConfirmDialog(null, "Would you like to generate a password?", mn, JOptionPane.YES_NO_OPTION);
         if (r7 == JOptionPane.YES_OPTION) {
@@ -141,8 +142,8 @@ public class RandomStringExample {
         }
         JOptionPane.showMessageDialog(null,"Thank you for using " + mn +  " " + v + "\nThe person who created this program is " + a + "\nThe v this program is currently on is " + v + "\n If you have the JAR file but not the repository, you can check it out here " + ghRepo + "\n The GitHub account that currently made it is " + ghAcc , mn, JOptionPane.QUESTION_MESSAGE);
         System.exit(0);
-    } // End of main method for mn. 
-    
+    } // End of main method for mn.
+
 
     // Method to copy the generated String to the clipboard.
     private static void sendToClipBoard(StringBuilder stringBuilder) {
@@ -150,6 +151,17 @@ public class RandomStringExample {
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(stringSelection, null);
     }
+
+    // Method for every 5 characters to add a - to the string.
+    private static StringBuilder addDashes(StringBuilder stringBuilder) {
+        for (int i = 0; i < stringBuilder.length(); i++) {
+            if (i % 5 == 0) {
+                stringBuilder.insert(i, "-");
+            }
+        }
+        return stringBuilder;
+    }
+
 
 
     // Main method
