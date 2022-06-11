@@ -5,7 +5,6 @@
 # Todo List
 
 - Convert to Kotlin? (Future maybe :)
-- Fix there being "-" in the first character of the string.
 # Credit and License 
 
 - LazzzyJava for helping
