@@ -19,7 +19,7 @@ public class RandomStringExample {
     public static final String fn = "output-information.";
 
     public static void getAlphaNumericString(int n) {
-        // length is bounded by 256 Chars as per the Ascii Table (2^8).
+        // length is bounded by 59 Chars as per the Ascii Table (2^8).
         byte[] array = new byte[59];
         new Random().nextBytes(array);
 
@@ -40,7 +40,7 @@ public class RandomStringExample {
             }
         }
 
-        addDashes(r); // add dashes to the string
+        addDashes(r); // Invokes add dashes method
 
 
 
@@ -154,23 +154,20 @@ public class RandomStringExample {
 
 
     // Method to copy the generated String to the clipboard.
-    private static void sendToClipBoard(StringBuilder stringBuilder) {
+    public static void sendToClipBoard(StringBuilder stringBuilder) {
         StringSelection stringSelection = new StringSelection(stringBuilder.toString());
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(stringSelection, null);
-    }
-
-    // Limit the length of the string to n characters and append the result to the StringBuffer r
-
+    } // End of sendToClipBoard method.
 
     // Method for every 5 characters to add a - to the string.
-    private static void addDashes(StringBuilder stringBuilder) {
+    public static void addDashes(StringBuilder stringBuilder) {
         for (int i = 1; i < stringBuilder.length(); i++) {
             if (i % 5 == 0) {
                 stringBuilder.insert(i, "-");
             }
         }
-    }
+    } // End of addDashes method.
 
 
 
