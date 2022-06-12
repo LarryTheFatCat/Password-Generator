@@ -4,6 +4,7 @@
 
 # Todo List
 
+- Move variables into Main Class.
 - Convert to Kotlin? (Future maybe :)
 # Credit and License 
 
