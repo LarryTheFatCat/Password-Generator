@@ -3,7 +3,7 @@
 - Developed with Java 8
 
 # Todo List
-
+- Full documentation
 # Credit and License 
 
 - LazzzyJava for helping
