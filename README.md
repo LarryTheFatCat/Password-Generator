@@ -3,7 +3,7 @@
 - Developed with Java 8
 
 # Todo List
-- Convert to Kotlin? (Future maybe :)
+
 # Credit and License 
 
 - LazzzyJava for helping
