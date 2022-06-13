@@ -1,6 +1,7 @@
 package main;
 
 import javax.swing.*;
+import javax.swing.plaf.ColorUIResource;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
@@ -10,7 +11,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.Random;
 
 public class RandomStringExample {
-
     public static final String mn = "Password - Generator";
     public static final String v = "v-1.0";
     public static final String a = "TwoOneTwo";
@@ -19,7 +19,7 @@ public class RandomStringExample {
     public static final String fn = "output-information.";
 
     public static void getAlphaNumericString(int n) {
-        // length is bounded by 59 Chars as per the Ascii Table (2^8).
+        // Length is bounded by 59 Character(n-1)
         byte[] array = new byte[59];
         new Random().nextBytes(array);
 
@@ -40,7 +40,7 @@ public class RandomStringExample {
             }
         }
 
-        addDashes(r); // Invokes add dashes method
+        addDashes(r); // Invokes addDashes method
 
 
 
