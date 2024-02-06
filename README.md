@@ -1,31 +1,4 @@
-# Random String Generator in Java
-
-- Developed with Java 8
-
-# Credit and License 
-
-- https://www.geeksforgeeks.org/java-swing-jdialog-examples/ for some info
-- https://stackoverflow.com/questions/11496700/how-to-use-printwriter-and-file-classes-in-java Discovered PrintWriter
-  but forgot about it lol, this helped a lot
-
-
-
-
-# How to use this program?
-
-- Download the .jar file
-- Run it
-- Enter the length of the string you want
-- Click the button
-- Copy the string
-- Paste it wherever you want
-
-# How to compile this program?
-
-- Download the source code
-- Open the folder in your IDE
-- Compile it
-- Run it
+# Passwors Generator With Java
 
 # How to contribute?
 
